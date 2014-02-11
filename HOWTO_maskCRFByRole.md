@@ -1,16 +1,14 @@
 Mask CRF By Role
 ================
 
-Introduction
-------------
+The idea
+--------
 In a clinical trial it may be necessary because of FDA guidance or the structure of the experiment to blind a particular
 role to a particular set of 1 or more case report forms (CRF).
 
 The current versions of Clin Capture and Open Clinica do not provide this level of granularity.   The objective of the maskCRFByRole.js
 library is to provide exactly that capability without requiring any changes in the Java bean code or in JSP pages.
 
-The idea
---------
 
 How to install
 --------------
