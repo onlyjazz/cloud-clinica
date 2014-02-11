@@ -25,14 +25,14 @@ In terms of coverage - the masking is performed on all the relevant ClinCapture 
 we are fairly confident we covered all the interesting use cases:
 
 Pages that are masked:
-    'InitialDataEntry' 
-    'AdministrativeEditing'
-    'ViewSectionDataEntry'
-    'PrintDataEntry'
-    'ResolveDiscrepancy'
-    'PrintCRF'
-    'Extract Data' (removes the link from Tasks menu)
-    'Subject\'s Case Book' (removes the button from the View Subject page)
+1.    InitialDataEntry 
+2.    AdministrativeEditing
+3.    ViewSectionDataEntry
+4.    PrintDataEntry
+5.    ResolveDiscrepancy
+6.    PrintCRF
+7.    Extract Data (removes the link from Tasks menu)
+8.    Subject\s Case Book (removes the button from the View Subject page)
 
 If a user visits pages masked to his/her role - they will get an alert and be redirected back to the referer (the previous page). For example,
 if an Investigator is masked to "Test results" - when they attempt to view "Test results" from the Subjects matrix - they will get a warning and be
@@ -40,7 +40,7 @@ redirected back to the Subjects matrix.
     
 Limitations
 ------------
-Currently tested in ClinCapture 1.0.3.5.x and versions > 1.0.8.x.   It probably won't work in older versions of ClinCapture like 1.0.3.1 or Open Clinica
+Currently tested in ClinCapture 1.0.3.5.x and versions > 1.0.8.x.   It probably wont work in older versions of ClinCapture like 1.0.3.1 or Open Clinica
 but it is fairly trivial to adapt the code by identifying  the correct DOM elements using the Chrome or FF debugger and modifying the Jquery calls accordingly.
 
 
