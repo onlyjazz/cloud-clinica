@@ -3,16 +3,18 @@ Mask CRF By Role
 
 The idea
 --------
-In a clinical trial it may be necessary because of FDA guidance or the structure of the experiment to blind a particular
-role to a particular set of 1 or more case report forms (CRF).
+In a clinical trial, FDA guidance or the structure of the experiment may require blinding a particular
+role to a particular set of 1 or more case report forms (CRF). For example - you may not want an Investigator to be able to view test results
+in order to minimize bias in subject recruitment.
 
-The current versions of Clin Capture and Open Clinica do not provide this level of granularity.   The objective of the maskCRFByRole.js
+The current versions of ClinCapture and OpenClinica do not provide this level of granularity.   The objective of the maskCRFByRole.js
 library is to provide exactly that capability without requiring any changes in the Java bean code or in JSP pages.
 
 
 How to install
 --------------
 maskCRFByRole.js is a JavaScript library that can be included in the webapps/<yourwebapp>/includes/global_functions_javascript.js directory
+Take backup - include the library and you are ready to go.
 
 How it works
 ------------
@@ -25,14 +27,14 @@ In terms of coverage - the masking is performed on all the relevant ClinCapture 
 we are fairly confident we covered all the interesting use cases:
 
 Pages that are masked:
-1.    InitialDataEntry 
-2.    AdministrativeEditing
-3.    ViewSectionDataEntry
-4.    PrintDataEntry
-5.    ResolveDiscrepancy
-6.    PrintCRF
-7.    Extract Data (removes the link from Tasks menu)
-8.    Subject\s Case Book (removes the button from the View Subject page)
+1.InitialDataEntry
+2.AdministrativeEditing
+3.ViewSectionDataEntry
+4.PrintDataEntry
+5.ResolveDiscrepancy
+6.PrintCRF
+7.Extract Data (removes the link from Tasks menu)
+8.Subject\s Case Book (removes the button from the View Subject page)
 
 If a user visits pages masked to his/her role - they will get an alert and be redirected back to the referer (the previous page). For example,
 if an Investigator is masked to "Test results" - when they attempt to view "Test results" from the Subjects matrix - they will get a warning and be
